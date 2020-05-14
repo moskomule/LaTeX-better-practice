@@ -42,6 +42,32 @@ To enable minted with TeXPad
 * `ln -s $(which pygmentize) /Library/TeX/texbin`
 * Enable `--shell-escape` in TeXPad's settings.
 
+You can *freeze* minted environments (especially for arXiv) by
+
+```latex
+\usepackage[%
+finalizecache=true,
+cachedir=.
+]{minted}
+```
+
+then compiling then
+
+```latex
+\usepackage[%
+frozencache=true,
+cachedir=.
+]{minted}
+```
+
+
+
+### Links
+
+* https://www.overleaf.com/learn/latex/Code_Highlighting_with_minted
+
+### arXiv
+
 ## Use multiple files
 
 Use `subfiles`.
@@ -72,4 +98,62 @@ Use `subfiles`.
 
 Of course `TYPESET main.tex` is ok, as well as `TYPESET section1.tex`
 
-[More details](https://www.overleaf.com/learn/latex/Multi-file_LaTeX_projects)
+### Links
+
+* https://www.overleaf.com/learn/latex/Multi-file_LaTeX_projects
+
+
+## BibLaTeX
+
+```latex
+\documentclass{article}
+\usepackage[sortcites,
+backend=biber,
+hyperref=true,
+style=numeric,
+language=auto,
+babel=hyphen,
+maxbibnames=20,
+maxcitenames=2,
+eprint=false]{biblatex}
+\addbibresource{library.bib}
+
+\begin{document}
+
+\clearpage
+\printbibliography
+
+\end{document}
+```
+
+## Extract `.bib` file
+
+Suppose the main file name is `main.tex`.
+
+### BibLaTeX
+
+`biber --output_format=bibtex --output_resolve main.bcf -O extracted.bib`
+
+### BibTeX
+
+`bibexport -o extracted.bib main.aux`
+
+## Booktab for high-quality tables
+
+```latex
+
+% \usepackage{booktabs}
+\begin{table}
+    \centering
+    \bagin{tabular}{ccc}
+        \toprule
+        Foo    & Bar  & XXX   \\ 
+        \midrule
+        1      & 2    & 3     \\ 
+        \cmidrule(r){1-2}
+        4      & 5    & 6     \\ 
+        \bottomrule
+    \end{tabular}
+
+\end{table}
+```
