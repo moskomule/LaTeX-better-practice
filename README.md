@@ -65,8 +65,8 @@ cachedir=.
 ### Links
 
 * https://www.overleaf.com/learn/latex/Code_Highlighting_with_minted
+* http://tug.ctan.org/macros/latex/contrib/minted/minted.pdf
 
-### arXiv
 
 ## Use multiple files
 
@@ -157,3 +157,23 @@ Suppose the main file name is `main.tex`.
 
 \end{table}
 ```
+
+## Smart enumerate/itemize
+
+```latex
+
+% \usepackage{enumitem}
+\begin{enumerate}[label={\roman*},start=2]
+    \item Start from 2
+\end{enumerate}
+```
+
+### Links
+
+* http://konoyonohana.blog.fc2.com/blog-entry-58.html
+
+## Wrap Figure/Table
+
+### Links
+
+* http://konoyonohana.blog.fc2.com/blog-entry-259.html
