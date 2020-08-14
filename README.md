@@ -174,6 +174,37 @@ Suppose the main file name is `main.tex`.
 
 ## Wrap Figure/Table
 
+I don't like to use wrapped figures/tables, but sometimes, I need to.
+
+```latex
+%\usepackage{wrapfig}
+\begin{wrapfigure}[11]{r}{0.4\linewidth}
+    \centering
+\end{wrapfigure}
+```
+
+Here, `11` corresponds to the height in 11 lines and `0.4\linewidth` determins the width.
+
 ### Links
 
 * http://konoyonohana.blog.fc2.com/blog-entry-259.html
+
+## Stop using unnecessary \(re)newcommand
+
+For mathematical operators, use
+
+```
+\DeclareMathOperator{\ReLU}{ReLU}
+```
+
+```
+\DeclareMathOperator*{\argmax}{argmax}
+```
+
+For paired operators, e.g., norms, use
+
+```
+\DeclarePairedDelimiter{\norm}{\lVert}{\rVert}
+```
+
+*For `\ReLU`, `\DeclareMathSymbol` may be a better choice.*
