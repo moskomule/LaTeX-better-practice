@@ -208,3 +208,8 @@ For paired operators, e.g., norms, use
 ```
 
 *For `\ReLU`, `\DeclareMathSymbol` may be a better choice.*
+
+### Links
+
+https://www.ctan.org/pkg/mathtools
+https://www.ctan.org/pkg/amsmath
