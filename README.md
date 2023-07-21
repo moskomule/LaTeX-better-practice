@@ -126,7 +126,7 @@ eprint=false]{biblatex}
 \end{document}
 ```
 
-## Extract `.bib` file
+## Extract used entries from `.bib` files
 
 Suppose the main file name is `main.tex`.
 
@@ -158,14 +158,30 @@ Suppose the main file name is `main.tex`.
 \end{table}
 ```
 
-## Smart enumerate/itemize
+## Multiple lines in a table entry
+
+`p{WIDTH}` fixes the width of columns.
 
 ```latex
+% \usepackage{array}
+\newcolumntype{P}[1]{>{\centering\arraybackslash}p{#1}} % default p is to align left.
+\begin{tabular}{p{0.5\linewidth}P{0.4\linewidth}}
+...
 
+```
+
+## Smart enumerate/itemize and description
+
+```latex
 % \usepackage{enumitem}
 \begin{enumerate}[label={\roman*},start=2]
     \item Start from 2
 \end{enumerate}
+
+\begin{description}leftmargin=*,itemsep=0pt,topsep=0pt
+    \item [LaTeX] LaTeX is ...
+    \item [BibTeX] BibTeX is ...
+\end{description}
 ```
 
 ### Links
