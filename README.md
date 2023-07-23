@@ -1,7 +1,7 @@
 # LaTeX-better-practice
 To avoid re-searching and re-inventing wheels
 
-*Note that the tips here might be better, but not best*
+*Note that the tips here might be better, but not the best*
 
 ## Add source codes
 
@@ -236,3 +236,12 @@ https://www.ctan.org/pkg/amsmath
 \captionsetup[figure]{skip=5pt}
 ```
 
+### Export a pandas DataFrame as a  LaTeX table
+
+```python
+df
+# model      |  param_size     |   test_accuracy     |
+# ----------------------------------------------------
+# resnet     |  3M             |   0.9               |
+df.to_latex(index=False, formatters=[lambda x: clean_model_names[x], "{:.2f}".format, "{:.2f}".format], header=["Model", "Num Params", "Test acc"])
+```
