@@ -178,7 +178,7 @@ Suppose the main file name is `main.tex`.
     \item Start from 2
 \end{enumerate}
 
-\begin{description}leftmargin=*,itemsep=0pt,topsep=0pt
+\begin{description}[leftmargin=*,itemsep=0pt,topsep=0pt]
     \item [LaTeX] LaTeX is ...
     \item [BibTeX] BibTeX is ...
 \end{description}
