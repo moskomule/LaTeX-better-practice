@@ -60,8 +60,6 @@ cachedir=.
 ]{minted}
 ```
 
-
-
 ### Links
 
 * https://www.overleaf.com/learn/latex/Code_Highlighting_with_minted
@@ -92,11 +90,11 @@ Use `subfiles`.
 \documentclass[main.tex]{subfiles}
 % main.tex's preambles are automatically loaded
 \begin{document}
-    % contens
+    % content
 \end{document}
 ```
 
-Of course `TYPESET main.tex` is ok, as well as `TYPESET section1.tex`
+Of course, `TYPESET main.tex` is ok, as well as `TYPESET section1.tex`
 
 ### Links
 
@@ -229,3 +227,12 @@ For paired operators, e.g., norms, use
 
 https://www.ctan.org/pkg/mathtools
 https://www.ctan.org/pkg/amsmath
+
+## Control margins around captions
+
+```latex
+\usepackage{caption}
+\captionsetup[table]{skip=5pt}
+\captionsetup[figure]{skip=5pt}
+```
+
