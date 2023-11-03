@@ -245,3 +245,11 @@ df
 # resnet     |  3M             |   0.9               |
 df.to_latex(index=False, formatters=[lambda x: clean_model_names[x], "{:.2f}".format, "{:.2f}".format], header=["Model", "Num Params", "Test acc"])
 ```
+
+### Figure A. 1 in Appendices
+
+```latex
+\appendix
+\counterwithin{figure}{section}
+\counterwithin{table}{section}
+```
